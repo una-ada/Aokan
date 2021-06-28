@@ -1,8 +1,7 @@
 /**
  * Main server script.
  * @author Una Ada <una@anarchy.website>
- * @version 0.1.0
- * @since 0.1.0
+ * @version 2021.06.27
  */
 
 /*----- Imports --------------------------------------------------------------*/

@@ -1,8 +1,7 @@
 /**
  * Index router
  * @author Una Ada <una@anarchy.website>
- * @version 0.1.1
- * @since 0.1.1
+ * @version 2021.06.27
  */
 
 /*----- Imports --------------------------------------------------------------*/
