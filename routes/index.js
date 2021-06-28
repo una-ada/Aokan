@@ -10,7 +10,7 @@ import { Router } from 'express';
 
 /*----- Routes ---------------------------------------------------------------*/
 const router = new Router();
-router.get('/', (req, res) => res.sendStatus(200));
+router.get('/', (req, res) => res.render('index'));
 
 /*----- Exports --------------------------------------------------------------*/
 export default router;
