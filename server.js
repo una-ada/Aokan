@@ -21,7 +21,7 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname),
 
 /*----- Middleware -----------------------------------------------------------*/
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug');
 app.use(override('_method'));
 app.use(logger('dev'));
 app.use(express.json());
