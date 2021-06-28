@@ -23,7 +23,7 @@
     // https://github.com/gruntjs/grunt-contrib-watch
     watch: {
       css: {
-        files: ['src/styles/**/*.scss'],
+        files: ['styles/**/*.scss'],
         tasks: ['dart-sass'],
       },
     },
@@ -33,7 +33,6 @@
         files: [
           {
             expand: true,
-            cwd: 'src/',
             src: 'styles/*.scss',
             dest: 'public/',
             ext: '.css',
