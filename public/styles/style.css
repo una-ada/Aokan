@@ -5,6 +5,23 @@
  */
 /*----- Constants ------------------------------------------------------------*/
 /*----- Agent Overrides ------------------------------------------------------*/
+a {
+  color: #263238;
+  border-bottom: 3px solid #81a99f;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family: "Noto Sans JP", sans-serif;
+  font-weight: 900;
+}
+
+html {
+  background: #b1dbd0;
+  color: #263238;
 }

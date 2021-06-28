@@ -1,21 +1,13 @@
-//
-  Index Page
-  by Una Ada
-  2021.06.27
-doctype html 
-html(lang="en")
-  head
-    title Aokan
-    // Scripts
-    script(src="/js/client.js" type="module")
-    // Stylesheets
-    link(rel="preconnect" href="https://fonts.googleapis.com")
-    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(
-      rel="stylesheet"
-      href="//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900"
-    )
-    link(rel="stylesheet" href="/styles/style.css")
-  body
-    h1 青姦
-    h2 For when you totally recognize that voice.
+extends layout
+
+block content
+  h1 青姦
+  p
+    | A tool to help you figure out why you recognize that character's voice.
+    | Using the unofficial 
+    a(href="https://myanimelist.net/") MyAnimeList
+    |  API, 
+    a(href="https://jikan.moe/") Jikan
+    | . Created by 
+    a(href="https://github.com/una-ada") Una Ada
+    | .

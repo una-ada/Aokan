@@ -6,8 +6,26 @@
 
 /*----- Constants ------------------------------------------------------------*/
 $font-heading: 'Noto Sans JP', sans-serif;
+$color-accent: #b1dbd0;
+$color-accent-dark: #81a99f;
+$color-accent-light: #e3ffff;
+$color-text: #263238;
 
 /*----- Agent Overrides ------------------------------------------------------*/
+a {
+  color: $color-text;
+  border-bottom: 3px solid $color-accent-dark;
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
 h1 {
   font-family: $font-heading;
+  font-weight: 900;
+}
+html {
+  background: $color-accent;
+  color: $color-text;
 }
