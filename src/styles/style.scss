@@ -1,0 +1,13 @@
+/*
+ * Aokan Styles Index
+ * by Una Ada <una@anarchy.website>
+ * 2021.06.27
+ */
+
+/*----- Constants ------------------------------------------------------------*/
+$font-heading: 'Noto Sans JP', sans-serif;
+
+/*----- Agent Overrides ------------------------------------------------------*/
+h1 {
+  font-family: $font-heading;
+}
