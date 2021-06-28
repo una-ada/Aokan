@@ -12,6 +12,7 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import override from 'method-override';
+import router from './routes/index.js';
 
 /*----- Initialize -----------------------------------------------------------*/
 // Infill for `__dirname`
@@ -30,6 +31,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 /*----- Routers --------------------------------------------------------------*/
+app.use('/', router);
 
 /*----- Error Handling -------------------------------------------------------*/
 app.use(function (req, res, next) {
