@@ -19,13 +19,14 @@ a::before {
   content: "";
   height: 0;
   left: 0;
+  opacity: 0.5;
   position: absolute;
   transition: height 0.2s;
   width: 100%;
   z-index: -100;
 }
 a:hover::before {
-  height: 100%;
+  height: 60%;
 }
 
 body {
@@ -39,7 +40,9 @@ h1 {
 }
 
 html {
-  background: #b1dbd0;
+  background: #b1dbd0 url("../img/background.png");
+  background-attachment: fixed;
+  background-position: center center;
   color: #263238;
   font-family: "Noto Sans", sans-serif;
   font-weight: bold;
