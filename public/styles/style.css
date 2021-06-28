@@ -7,8 +7,25 @@
 /*----- Agent Overrides ------------------------------------------------------*/
 a {
   color: #263238;
-  border-bottom: 3px solid #81a99f;
+  background: linear-gradient(0, #81a99f 20%, rgba(0, 0, 0, 0) 20%);
+  display: inline-block;
+  position: relative;
   text-decoration: none;
+  z-index: 100;
+}
+a::before {
+  background: #81a99f;
+  bottom: 0;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  transition: height 0.2s;
+  width: 100%;
+  z-index: -100;
+}
+a:hover::before {
+  height: 100%;
 }
 
 body {
@@ -17,11 +34,13 @@ body {
 }
 
 h1 {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", "Noto Sans", sans-serif;
   font-weight: 900;
 }
 
 html {
   background: #b1dbd0;
   color: #263238;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
 }

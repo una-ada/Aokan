@@ -5,17 +5,38 @@
  */
 
 /*----- Constants ------------------------------------------------------------*/
-$font-heading: 'Noto Sans JP', sans-serif;
+$font-heading: 'Noto Sans JP', 'Noto Sans', sans-serif;
+$font-copy: 'Noto Sans', sans-serif;
 $color-accent: #b1dbd0;
 $color-accent-dark: #81a99f;
 $color-accent-light: #e3ffff;
+$color-none: rgba(0, 0, 0, 0);
 $color-text: #263238;
 
 /*----- Agent Overrides ------------------------------------------------------*/
 a {
   color: $color-text;
-  border-bottom: 3px solid $color-accent-dark;
+  background: linear-gradient(0, $color-accent-dark 20%, $color-none 20%);
+  display: inline-block;
+  position: relative;
   text-decoration: none;
+  z-index: 100;
+  &::before {
+    background: $color-accent-dark;
+    bottom: 0;
+    content: '';
+    height: 0;
+    left: 0;
+    position: absolute;
+    transition: height 0.2s;
+    width: 100%;
+    z-index: -100;
+  }
+  &:hover {
+    &::before {
+      height: 100%;
+    }
+  }
 }
 body {
   margin: 0;
@@ -28,4 +49,6 @@ h1 {
 html {
   background: $color-accent;
   color: $color-text;
+  font-family: $font-copy;
+  font-weight: bold;
 }
