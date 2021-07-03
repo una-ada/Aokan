@@ -12,6 +12,11 @@ import usersCtrl from '../controllers/users.js';
 
 /*----- Routes ---------------------------------------------------------------*/
 const router = new Router();
+router.get('/:user', usersCtrl.getList);
+router.use(
+  (err, req, res, next) =>
+    console.error(err) || res.sendStatus(err.status || 500)
+);
 
 /*----- Exports --------------------------------------------------------------*/
 export default router;

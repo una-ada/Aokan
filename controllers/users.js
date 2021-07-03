@@ -12,5 +12,15 @@ const mal = new Jikan();
 
 /*----- Export Modules -------------------------------------------------------*/
 export default {
-  
-}
+  /**
+   * @function usersCtrl.getList Get user anime list.
+   * @arg {Express.Request} req HTTP GET Request
+   * @arg {Express.Response} res HTTP Response
+   * @arg {Express.NextFunction} next Next function in the Express pipeline.
+   */
+  getList: (req, res, next) =>
+    mal
+      .findUser(req.params.user, 'animelist')
+      .then(user => res.send(user))
+      .catch(err => next(err)),
+};
