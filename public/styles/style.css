@@ -81,31 +81,48 @@ card {
   border-radius: 0.5rem;
   display: block;
   margin: 4rem auto;
-  padding: 0.5rem;
+  padding: 1rem;
   position: relative;
   width: 30rem;
 }
 
 .card__title {
   font-size: 4em;
-  margin: -3rem 0 0 0;
+  margin: -3.5rem 0 0 0;
   text-align: center;
   -webkit-text-stroke: 3px #145c62;
 }
 
 .card__content {
-  margin: 0;
+  margin: 0 0 1rem 0;
   text-align: center;
 }
 
-form {
+.form--single-field {
+  display: flex;
+}
+.form--single-field .text-field {
+  border-radius: 0.5rem 0 0 0.5rem;
+  flex: 1;
+}
+.form--single-field .text-field__input {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.form--single-field .form__submit {
+  border-radius: 0 0.5rem 0.5rem 0;
+  flex: 0;
+}
+
+.text-field {
+  background: #e0c1bf;
+  border-radius: 0.5rem;
   height: 35px;
   margin-bottom: 1rem;
   position: relative;
 }
 
 .text-field__responder {
-  background: #ddd;
+  background: #729a89;
   height: 100%;
   left: 0;
   opacity: 0;
@@ -116,26 +133,35 @@ form {
 
 .text-field__input {
   background: transparent;
-  border: 0;
+  border: 3px solid #145c62;
+  border-radius: 0.5rem;
+  color: #145c62;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
   left: 0;
+  height: calc(100% - 26px);
   outline: 0;
   padding: 10px;
   position: absolute;
   top: 0;
-  width: calc(100% - 55px);
+  width: calc(100% - 26px);
 }
 
 .form__submit {
+  background: #145c62;
   border: 0;
-  color: #fff !important;
+  border-radius: 0.5rem;
+  color: #e0c1bf;
   cursor: pointer;
   font-size: 20px !important;
   height: 35px;
   line-height: 35px;
   outline: 0;
-  position: absolute;
-  right: 0;
   text-align: center;
-  top: 0;
   width: 35px;
+}
+
+::placeholder {
+  color: rgba(114, 154, 137, 0.7);
+  opacity: 1;
 }

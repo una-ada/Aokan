@@ -16,8 +16,8 @@ document.addEventListener('click', e =>
       Object.assign(res.style, {
         transitionDuration: '1s',
         opacity: 0,
-        webkitClipPath: `circle(${(rect =>
-          (rect.width ** 2 + rect.height ** 2) ** 0.5)(
+        webkitClipPath: `circle(${(({ width, height }) =>
+          (width ** 2 + height ** 2) ** 0.5)(
           res.getBoundingClientRect()
         )}px at ${e.offsetX}px ${e.offsetY}px)`,
       })
