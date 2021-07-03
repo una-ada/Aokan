@@ -1,7 +1,8 @@
 card {
   background: $color-accent-primary;
   border: $size-border solid $color-accent-dark;
-  border-radius: 1rem;
+  box-shadow: $shadow-2dp;
+  border-radius: 0.5rem;
   display: block;
   margin: 4rem auto;
   padding: 0.5rem;
@@ -23,6 +24,7 @@ footer {
   background-attachment: fixed;
   background-position: bottom left;
   bottom: 0;
+  box-shadow: $shadow-16dp;
   display: block;
   font-size: 0.8em;
   left: 0;

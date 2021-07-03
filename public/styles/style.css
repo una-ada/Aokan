@@ -52,7 +52,8 @@ html {
 card {
   background: #729a89;
   border: 3px solid #145c62;
-  border-radius: 1rem;
+  box-shadow: 0 1px 5px 0 rgba(20, 92, 98, 0.2), 0 2px 2px 0 rgba(20, 92, 98, 0.14), 0 3px 1px -2px rgba(20, 92, 98, 0.12);
+  border-radius: 0.5rem;
   display: block;
   margin: 4rem auto;
   padding: 0.5rem;
@@ -77,6 +78,7 @@ footer {
   background-attachment: fixed;
   background-position: bottom left;
   bottom: 0;
+  box-shadow: 0 8px 10px -5px rgba(20, 92, 98, 0.2), 0 16px 24px 2px rgba(20, 92, 98, 0.14), 0 6px 30px 5px rgba(20, 92, 98, 0.12);
   display: block;
   font-size: 0.8em;
   left: 0;
