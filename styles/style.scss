@@ -7,11 +7,11 @@
 /*----- Constants ------------------------------------------------------------*/
 $font-heading: 'Noto Sans JP', 'Noto Sans', sans-serif;
 $font-copy: 'Noto Sans', sans-serif;
-$color-accent: #b1dbd0;
-$color-accent-dark: #81a99f;
-$color-accent-light: #e3ffff;
+$color-accent: #729a89;
+$color-accent-dark: #145c62;
 $color-none: rgba(0, 0, 0, 0);
-$color-text: #263238;
+$color-text: #0a2619;
+$color-white: #e0c1bf;
 
 /*----- Agent Overrides ------------------------------------------------------*/
 a {
@@ -27,7 +27,6 @@ a {
     content: '';
     height: 0;
     left: 0;
-    opacity: 0.5;
     position: absolute;
     transition: height 0.2s;
     width: 100%;

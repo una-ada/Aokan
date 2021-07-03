@@ -6,20 +6,19 @@
 /*----- Constants ------------------------------------------------------------*/
 /*----- Agent Overrides ------------------------------------------------------*/
 a {
-  color: #263238;
-  background: linear-gradient(0, #81a99f 20%, rgba(0, 0, 0, 0) 20%);
+  color: #0a2619;
+  background: linear-gradient(0, #145c62 20%, rgba(0, 0, 0, 0) 20%);
   display: inline-block;
   position: relative;
   text-decoration: none;
   z-index: 100;
 }
 a::before {
-  background: #81a99f;
+  background: #145c62;
   bottom: 0;
   content: "";
   height: 0;
   left: 0;
-  opacity: 0.5;
   position: absolute;
   transition: height 0.2s;
   width: 100%;
@@ -40,10 +39,10 @@ h1 {
 }
 
 html {
-  background: #b1dbd0 url("../img/background.png");
+  background: #729a89 url("../img/background.png");
   background-attachment: fixed;
   background-position: center center;
-  color: #263238;
+  color: #0a2619;
   font-family: "Noto Sans", sans-serif;
   font-weight: bold;
 }
