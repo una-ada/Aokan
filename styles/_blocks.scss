@@ -1,0 +1,42 @@
+card {
+  background: $color-accent-primary;
+  border: $size-border solid $color-accent-dark;
+  border-radius: 1rem;
+  display: block;
+  margin: 4rem auto;
+  padding: 0.5rem;
+  position: relative;
+  width: 30rem;
+}
+.card--title {
+  font-size: 4em;
+  margin: -3rem 0 0 0;
+  text-align: center;
+  -webkit-text-stroke: $size-border $color-accent-dark;
+}
+.card--content {
+  margin: 0;
+  text-align: center;
+}
+footer {
+  background: $color-accent-dark url('../img/background-footer.png');
+  background-attachment: fixed;
+  background-position: top left;
+  bottom: 0;
+  display: block;
+  font-size: 0.8em;
+  left: 0;
+  padding: 0.4rem;
+  position: fixed;
+  text-align: right;
+  width: calc(100% - 0.8rem);
+}
+.footer--content {
+  margin: 0;
+  a {
+    background: linear-gradient(0, $color-accent-primary 20%, $color-none 20%);
+    &::before {
+      background: $color-accent-primary;
+    }
+  }
+}

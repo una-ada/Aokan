@@ -33,7 +33,7 @@
         files: [
           {
             expand: true,
-            src: 'styles/*.scss',
+            src: 'styles/style.scss',
             dest: 'public/',
             ext: '.css',
           },

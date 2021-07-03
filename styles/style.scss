@@ -7,11 +7,13 @@
 /*----- Constants ------------------------------------------------------------*/
 $font-heading: 'Noto Sans JP', 'Noto Sans', sans-serif;
 $font-copy: 'Noto Sans', sans-serif;
-$color-accent: #729a89;
+$color-accent-primary: #729a89;
 $color-accent-dark: #145c62;
+$color-accent-secondary: #e0c1bf;
 $color-none: rgba(0, 0, 0, 0);
-$color-text: #0a2619;
-$color-white: #e0c1bf;
+$color-text: #e0c1bf;
+$size-em: 12pt;
+$size-border: 3px;
 
 /*----- Agent Overrides ------------------------------------------------------*/
 a {
@@ -47,10 +49,14 @@ h1 {
   font-weight: 900;
 }
 html {
-  background: $color-accent url('../img/background.png');
+  background: $color-accent-primary url('../img/background.png');
   background-attachment: fixed;
-  background-position: center center;
+  background-position: top left;
   color: $color-text;
   font-family: $font-copy;
+  font-size: $size-em;
   font-weight: bold;
 }
+
+/*----- Imports --------------------------------------------------------------*/
+@import 'blocks';

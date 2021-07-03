@@ -1,12 +1,16 @@
 extends layout
-
 block content
-  h1 青姦
-  p A tool to help you figure out why you recognize that character's voice.
-  p Using the unofficial 
-    a(href="https://myanimelist.net/") MyAnimeList
-    |  API, 
-    a(href="https://jikan.moe/") Jikan
-    | . Created by 
-    a(href="https://github.com/una-ada") Una Ada
-    | .
+  card
+    h1.card--title 青姦
+    p.card--content
+      | A tool to help you figure out why you recognize that character's voice.
+  footer
+    p.footer--content
+      a(href="https://github.com/una-ada/Aokan") Aokan
+      |  was created by 
+      a(href="https://github.com/una-ada") Una Ada
+      |  using the unofficial 
+      a(href="https://myanimelist.net/") MyAnimeList
+      |  API, 
+      a(href="https://jikan.moe/") Jikan
+      | .
