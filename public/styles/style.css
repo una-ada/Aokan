@@ -41,7 +41,7 @@ h1 {
 html {
   background: #729a89 url("../img/background.png");
   background-attachment: fixed;
-  background-position: top left;
+  background-position: bottom left;
   color: #e0c1bf;
   font-family: "Noto Sans", sans-serif;
   font-size: 12pt;
@@ -75,7 +75,7 @@ card {
 footer {
   background: #145c62 url("../img/background-footer.png");
   background-attachment: fixed;
-  background-position: top left;
+  background-position: bottom left;
   bottom: 0;
   display: block;
   font-size: 0.8em;
