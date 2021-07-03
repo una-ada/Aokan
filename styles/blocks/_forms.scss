@@ -1,0 +1,38 @@
+form {
+  height: 35px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.text-field__responder {
+  background: #ddd;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.text-field__input {
+  background: transparent;
+  border: 0;
+  left: 0;
+  outline: 0;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  width: calc(100% - 55px);
+}
+.form__submit {
+  border: 0;
+  color: #fff !important;
+  cursor: pointer;
+  font-size: 20px !important;
+  height: 35px;
+  line-height: 35px;
+  outline: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 35px;
+}

@@ -49,30 +49,6 @@ html {
 }
 
 /*----- Imports --------------------------------------------------------------*/
-card {
-  background: #729a89;
-  border: 3px solid #145c62;
-  box-shadow: 0 1px 5px 0 rgba(20, 92, 98, 0.2), 0 2px 2px 0 rgba(20, 92, 98, 0.14), 0 3px 1px -2px rgba(20, 92, 98, 0.12);
-  border-radius: 0.5rem;
-  display: block;
-  margin: 4rem auto;
-  padding: 0.5rem;
-  position: relative;
-  width: 30rem;
-}
-
-.card--title {
-  font-size: 4em;
-  margin: -3rem 0 0 0;
-  text-align: center;
-  -webkit-text-stroke: 3px #145c62;
-}
-
-.card--content {
-  margin: 0;
-  text-align: center;
-}
-
 footer {
   background: #145c62 url("../img/background-footer.png");
   background-attachment: fixed;
@@ -96,4 +72,70 @@ footer {
 }
 .footer--content a::before {
   background: #729a89;
+}
+
+card {
+  background: #729a89;
+  border: 3px solid #145c62;
+  box-shadow: 0 1px 5px 0 rgba(20, 92, 98, 0.2), 0 2px 2px 0 rgba(20, 92, 98, 0.14), 0 3px 1px -2px rgba(20, 92, 98, 0.12);
+  border-radius: 0.5rem;
+  display: block;
+  margin: 4rem auto;
+  padding: 0.5rem;
+  position: relative;
+  width: 30rem;
+}
+
+.card__title {
+  font-size: 4em;
+  margin: -3rem 0 0 0;
+  text-align: center;
+  -webkit-text-stroke: 3px #145c62;
+}
+
+.card__content {
+  margin: 0;
+  text-align: center;
+}
+
+form {
+  height: 35px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.text-field__responder {
+  background: #ddd;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.text-field__input {
+  background: transparent;
+  border: 0;
+  left: 0;
+  outline: 0;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  width: calc(100% - 55px);
+}
+
+.form__submit {
+  border: 0;
+  color: #fff !important;
+  cursor: pointer;
+  font-size: 20px !important;
+  height: 35px;
+  line-height: 35px;
+  outline: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 35px;
 }
