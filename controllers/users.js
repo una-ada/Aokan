@@ -20,7 +20,22 @@ export default {
    */
   getList: (req, res, next) =>
     mal
-      .findUser(req.params.user, 'animelist')
-      .then(user => res.send(user))
+      .findUser(req.params.user, 'profile')
+      .then(user =>
+        Promise.all(
+          Array.from(
+            { length: Math.ceil(user.anime_stats.total_entries / 300) },
+            (_, i) => i + 1
+          ).map(v =>
+            mal.findUser(req.params.user, 'animelist', 'all', {
+              page: v,
+            })
+          )
+        )
+          .then(pages =>
+            res.send(pages.reduce((list, page) => list.concat(page.anime), []))
+          )
+          .catch(err => next(err))
+      )
       .catch(err => next(err)),
 };
