@@ -19,12 +19,7 @@ const AJAX = ({ method, url, params, headers }) =>
       );
     req.send(
       params && typeof params == 'object'
-        ? Object.entries(params)
-            .map(
-              ([key, value]) =>
-                encodeURIComponent(key) + encodeURIComponent(value)
-            )
-            .join('&')
+        ? new URLSearchParams(Object.entries(params)).toString()
         : params
     );
   });
