@@ -60,7 +60,7 @@ footer {
   background-attachment: fixed;
   background-position: bottom left;
   bottom: 0;
-  box-shadow: 0 8px 10px -5px rgba(20, 92, 98, 0.2), 0 16px 24px 2px rgba(20, 92, 98, 0.14), 0 6px 30px 5px rgba(20, 92, 98, 0.12);
+  box-shadow: 0 8px 10px -5px rgba(34, 34, 34, 0.2), 0 16px 24px 2px rgba(34, 34, 34, 0.14), 0 6px 30px 5px rgba(34, 34, 34, 0.12);
   display: block;
   font-size: 0.8em;
   left: 0;
@@ -83,7 +83,7 @@ footer {
 card {
   background: #729a89ff;
   border: 3px solid #145c62ff;
-  box-shadow: 0 1px 5px 0 rgba(20, 92, 98, 0.2), 0 2px 2px 0 rgba(20, 92, 98, 0.14), 0 3px 1px -2px rgba(20, 92, 98, 0.12);
+  box-shadow: 0 1px 5px 0 rgba(34, 34, 34, 0.2), 0 2px 2px 0 rgba(34, 34, 34, 0.14), 0 3px 1px -2px rgba(34, 34, 34, 0.12);
   border-radius: 0.5rem;
   display: block;
   margin: 4rem auto;
@@ -105,7 +105,10 @@ card {
 }
 
 .form--single-field {
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 5px 0 rgba(34, 34, 34, 0.2), 0 2px 2px 0 rgba(34, 34, 34, 0.14), 0 3px 1px -2px rgba(34, 34, 34, 0.12);
   display: flex;
+  transition: box-shadow 0.5s;
 }
 .form--single-field .text-field {
   border-radius: 0.5rem 0 0 0.5rem;
@@ -118,12 +121,14 @@ card {
   border-radius: 0 0.5rem 0.5rem 0;
   flex: 0;
 }
+.form--single-field:focus-within {
+  box-shadow: 0 5px 5px -3px rgba(34, 34, 34, 0.2), 0 8px 10px 1px rgba(34, 34, 34, 0.14), 0 3px 14px 2px rgba(34, 34, 34, 0.12);
+}
 
 .text-field {
   background: #e0c1bfff;
   border-radius: 0.5rem;
   height: 35px;
-  margin-bottom: 1rem;
   position: relative;
 }
 

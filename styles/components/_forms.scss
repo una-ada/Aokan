@@ -1,5 +1,8 @@
 .form--single-field {
+  border-radius: 0.5rem;
+  box-shadow: $shadow-2dp;
   display: flex;
+  transition: box-shadow 0.5s;
   .text-field {
     border-radius: 0.5rem 0 0 0.5rem;
     flex: 1;
@@ -11,12 +14,14 @@
     border-radius: 0 0.5rem 0.5rem 0;
     flex: 0;
   }
+  &:focus-within {
+    box-shadow: $shadow-8dp;
+  }
 }
 .text-field {
   background: $color-accent-secondary;
   border-radius: 0.5rem;
   height: 35px;
-  margin-bottom: 1rem;
   position: relative;
 }
 .text-field__responder {
