@@ -1,18 +1,18 @@
 /*
  * Aokan Styles Index
  * by Una Ada <una@anarchy.website>
- * 2021.06.27
+ * 2021.07.03
  */
 
+/*----- Imports --------------------------------------------------------------*/
+@use 'lib/colors';
+
 /*----- Constants ------------------------------------------------------------*/
-$val-accent-primary: 114 154 137;
-$val-accent-dark: 20 92 98;
-$val-accent-secondary: 224 193 191;
-$color-accent-primary: rgb($val-accent-primary);
-$color-accent-dark: rgb($val-accent-dark);
-$color-accent-secondary: rgb($val-accent-secondary);
-$color-none: rgba(0, 0, 0, 0);
-$color-text: $color-accent-secondary;
+$color-accent-primary: colors.$foamy;
+$color-accent-dark: colors.$coral;
+$color-accent-secondary: colors.$lotus;
+$color-none: colors.$blank;
+$color-text: colors.$lotus;
 $font-heading: 'Noto Sans JP', 'Noto Sans', sans-serif;
 $font-copy: 'Noto Sans', sans-serif;
 $shadow-2dp: 0 1px 5px 0 rgba($color-accent-dark, 0.2),
@@ -70,5 +70,5 @@ html {
   font-weight: bold;
 }
 
-/*----- Imports --------------------------------------------------------------*/
-@import 'blocks/footer', 'blocks/cards', 'blocks/forms';
+/*----- Partials -------------------------------------------------------------*/
+@import 'components/footer', 'components/cards', 'components/forms';
