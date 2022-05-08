@@ -7,8 +7,8 @@
  */
 
 /*----- Imports --------------------------------------------------------------*/
-import { Client } from "jikan4.js";
-const mal = new Client();
+import Jikan from 'jikan4.js';
+const mal = new Jikan.Client();
 
 /*----- Export Modules -------------------------------------------------------*/
 export default {
