@@ -20,6 +20,7 @@ import { CharService } from '../../services/char.service';
 export class IndexComponent implements OnInit {
   isLinear = true;
   characterSelect!: FormGroup;
+  vaSelect!: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -27,5 +28,6 @@ export class IndexComponent implements OnInit {
     this.characterSelect = this.formBuilder.group({
       characterName: ['', Validators.required],
     });
+    this.vaSelect = this.formBuilder.group({});
   }
 }

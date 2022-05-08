@@ -21,10 +21,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from './pages/index/index.component';
+import { CharactersComponent } from './components/characters/characters.component';
+import { CharacterComponent } from './components/character/character.component';
 
 /*----- Module ---------------------------------------------------------------*/
 @NgModule({
-  declarations: [AppComponent, IndexComponent],
+  declarations: [AppComponent, IndexComponent, CharactersComponent, CharacterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
