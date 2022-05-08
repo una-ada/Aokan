@@ -15,10 +15,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
+import { IndexComponent } from './pages/index/index.component';
 
 /*----- Module ---------------------------------------------------------------*/
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, IndexComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
