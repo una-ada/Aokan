@@ -5,21 +5,26 @@
  */
 
 /*----- Imports --------------------------------------------------------------*/
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Character } from 'src/app/interfaces/Character';
 
-/*----- Decorator ------------------------------------------------------------*/
+/*----- Component ------------------------------------------------------------*/
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
   styleUrls: ['./character.component.scss'],
 })
-
-/*----- Component ------------------------------------------------------------*/
 export class CharacterComponent implements OnInit {
+  /*----- I/O ----------------------------------------------------------------*/
   @Input() character!: Character;
+  @Output() onSelectCharacter: EventEmitter<Character> = new EventEmitter();
 
+  /*----- Construction -------------------------------------------------------*/
   constructor() {}
-
   ngOnInit(): void {}
+
+  /*----- Methods ------------------------------------------------------------*/
+  onSelect(character: Character) {
+    this.onSelectCharacter.emit(character);
+  }
 }

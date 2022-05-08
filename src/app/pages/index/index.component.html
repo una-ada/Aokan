@@ -9,11 +9,12 @@
             matInput
             placeholder="Rei Ayanami"
             formControlName="characterName"
+            (change)="characterNameInput()"
             required
           />
           <mat-icon matSuffix>face</mat-icon>
         </mat-form-field>
-        <app-characters></app-characters>
+        <app-characters [characters]="searchResults"></app-characters>
       </form>
     </mat-step>
     <mat-step [stepControl]="vaSelect">

@@ -18,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from './pages/index/index.component';
@@ -26,7 +27,12 @@ import { CharacterComponent } from './components/character/character.component';
 
 /*----- Module ---------------------------------------------------------------*/
 @NgModule({
-  declarations: [AppComponent, IndexComponent, CharactersComponent, CharacterComponent],
+  declarations: [
+    AppComponent,
+    IndexComponent,
+    CharactersComponent,
+    CharacterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -40,6 +46,7 @@ import { CharacterComponent } from './components/character/character.component';
     MatInputModule,
     MatStepperModule,
     MatToolbarModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
