@@ -5,12 +5,13 @@
  */
 
 /*----- Imports --------------------------------------------------------------*/
+import path from 'path';
 import createError from 'http-errors';
 import express from 'express';
-import path from 'path';
-import cookieParser from 'cookie-parser';
-import logger from 'morgan';
 import override from 'method-override';
+import logger from 'morgan';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
 import charRouter from './routes/char.js';
@@ -26,6 +27,7 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname),
 // app.set('view engine', 'pug');
 app.use(override('_method'));
 app.use(logger('dev'));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
