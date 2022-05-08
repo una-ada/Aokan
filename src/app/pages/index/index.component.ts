@@ -7,6 +7,7 @@
 /*----- Imports --------------------------------------------------------------*/
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CharService } from '../../services/char.service';
 
 /*----- Component ------------------------------------------------------------*/
 @Component({
