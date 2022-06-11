@@ -7,6 +7,8 @@
  */
 
 /*----- Imports --------------------------------------------------------------*/
+//import Jikan from "jikan4.js";
+import fetch from "cross-fetch";
 import {
   ApolloClient,
   ApolloError,
@@ -14,16 +16,20 @@ import {
   InMemoryCache,
   gql,
 } from "@apollo/client/core/index.js";
-import fetch from "cross-fetch";
-const aniList = new ApolloClient({
-  link: new HttpLink({
-    uri: "https://graphql.anilist.co/",
-    fetch,
-  }),
-  cache: new InMemoryCache(),
-});
-//import Jikan from "jikan4.js";
+import { loadDocuments } from "@graphql-tools/load";
+import { GraphQLFileLoader } from "@graphql-tools/graphql-file-loader";
+
 //const mal = new Jikan.Client();
+const aniList = new ApolloClient({
+    link: new HttpLink({
+      uri: "https://graphql.anilist.co/",
+      fetch,
+    }),
+    cache: new InMemoryCache(),
+  }),
+  queries = await loadDocuments("./queries/characterSearch.graphql", {
+    loaders: [new GraphQLFileLoader()],
+  });
 
 /*----- Export Modules -------------------------------------------------------*/
 export default {
@@ -36,24 +42,7 @@ export default {
   search: (req, res, next) =>
     aniList
       .query({
-        query: gql`
-          query ($search: String) {
-            Page {
-              characters(search: $search) {
-                id
-                name {
-                  full
-                  native
-                }
-                image {
-                  large
-                  medium
-                }
-                description(asHtml: true)
-              }
-            }
-          }
-        `,
+        query: queries[0].document,
         variables: {
           search: req.params.name,
         },
