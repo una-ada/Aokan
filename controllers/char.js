@@ -7,8 +7,23 @@
  */
 
 /*----- Imports --------------------------------------------------------------*/
-import Jikan from 'jikan4.js';
-const mal = new Jikan.Client();
+import {
+  ApolloClient,
+  ApolloError,
+  HttpLink,
+  InMemoryCache,
+  gql,
+} from "@apollo/client/core/index.js";
+import fetch from "cross-fetch";
+const aniList = new ApolloClient({
+  link: new HttpLink({
+    uri: "https://graphql.anilist.co/",
+    fetch,
+  }),
+  cache: new InMemoryCache(),
+});
+//import Jikan from "jikan4.js";
+//const mal = new Jikan.Client();
 
 /*----- Export Modules -------------------------------------------------------*/
 export default {
@@ -19,8 +34,34 @@ export default {
    * @arg {Express.NextFunction} next Next function in the Express pipeline.
    */
   search: (req, res, next) =>
-    mal.characters
-      .search(req.params.name)
-      .then((results) => res.send(results))
-      .catch((err) => next(err)),
+    aniList
+      .query({
+        query: gql`
+          query ($search: String) {
+            Page {
+              characters(search: $search) {
+                id
+                name {
+                  full
+                  native
+                }
+                image {
+                  large
+                  medium
+                }
+                description(asHtml: true)
+              }
+            }
+          }
+        `,
+        variables: {
+          search: req.params.name,
+        },
+      })
+      .then((results) => res.json(results))
+      .catch((err) => {
+        if (err instanceof ApolloError)
+          console.log(err?.networkError.result.errors);
+        next(err);
+      }),
 };
