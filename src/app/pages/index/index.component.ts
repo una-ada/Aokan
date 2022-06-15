@@ -7,7 +7,7 @@
 /*----- Imports --------------------------------------------------------------*/
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { Character } from '../../interfaces/Character';
+import { Character } from 'src/app/interfaces/AniList';
 import { CharService } from '../../services/char.service';
 
 /*----- Component ------------------------------------------------------------*/
@@ -21,7 +21,7 @@ export class IndexComponent implements OnInit {
   isLinear = true;
   characterSelect!: FormGroup;
   vaSelect!: FormGroup;
-  searchResults: Character[] | undefined;
+  searchResults?: Character[];
 
   /*----- Constructor --------------------------------------------------------*/
   constructor(
@@ -39,6 +39,6 @@ export class IndexComponent implements OnInit {
   characterNameInput(): void {
     this.characterService
       .search(this.characterSelect.value.characterName)
-      .subscribe((list) => (this.searchResults = list));
+      .subscribe((list) => (this.searchResults = list.data?.characters));
   }
 }

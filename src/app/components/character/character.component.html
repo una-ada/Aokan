@@ -1,10 +1,10 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-subtitle>{{ character?.nameKanji }}</mat-card-subtitle>
-    <mat-card-title>{{ character?.name }}</mat-card-title>
-    <img mat-card-avatar src="{{ character?.image?.jpg?.medium }}" />
+    <mat-card-subtitle>{{ character?.name?.native }}</mat-card-subtitle>
+    <mat-card-title>{{ character?.name?.full }}</mat-card-title>
+    <img mat-card-avatar src="{{ character?.image?.medium }}" />
   </mat-card-header>
   <mat-card-content>
-    <p [innerHTML]="character?.about"></p>
+    <p [innerHTML]="character?.description"></p>
   </mat-card-content>
 </mat-card>

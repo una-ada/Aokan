@@ -14,7 +14,6 @@ import {
   ApolloError,
   HttpLink,
   InMemoryCache,
-  gql,
 } from "@apollo/client/core/index.js";
 import { loadDocuments } from "@graphql-tools/load";
 import { GraphQLFileLoader } from "@graphql-tools/graphql-file-loader";

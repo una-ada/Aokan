@@ -6,7 +6,7 @@
 
 /*----- Imports --------------------------------------------------------------*/
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Character } from 'src/app/interfaces/Character';
+import { Character } from 'src/app/interfaces/AniList';
 
 /*----- Component ------------------------------------------------------------*/
 @Component({

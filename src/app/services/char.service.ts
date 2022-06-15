@@ -1,14 +1,14 @@
 /**
  * Character API Service
  * @author Una Ada <una@xn--z7x.dev>
- * @version 2022.05.08
  */
 
 /*----- Imports --------------------------------------------------------------*/
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Character } from '../interfaces/Character';
+import { Page } from '../interfaces/AniList';
+import { GraphQLResponse } from '../interfaces/GraphQL';
 
 /*----- Injectable -----------------------------------------------------------*/
 @Injectable({
@@ -22,7 +22,9 @@ export class CharService {
   constructor(private http: HttpClient) {}
 
   /*----- Methods ------------------------------------------------------------*/
-  search(name: string): Observable<Character[]> {
-    return this.http.get<Character[]>(`${this.baseUrl}search/${name}`);
+  search(name: string): Observable<GraphQLResponse<Page>> {
+    return this.http.get<GraphQLResponse<Page>>(
+      `${this.baseUrl}search/${name}`
+    );
   }
 }

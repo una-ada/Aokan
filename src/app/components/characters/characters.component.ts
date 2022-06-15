@@ -6,7 +6,7 @@
  */
 
 /*----- Imports --------------------------------------------------------------*/import { Component, OnInit, Input } from '@angular/core';
-import { Character } from '../../interfaces/Character';
+import { Character } from '../../interfaces/AniList';
 
 
 /*----- Decorator ------------------------------------------------------------*/
