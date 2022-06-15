@@ -1,0 +1,25 @@
+<mat-stepper orientation="vertical" linear>
+  <mat-step [stepControl]="characterSelect">
+    <ng-template matStepLabel>Find Character</ng-template>
+    <form [formGroup]="characterSelect">
+      <mat-form-field appearance="outline" style="width: 100%">
+        <mat-label>Character Name</mat-label>
+        <input
+          matInput
+          placeholder="Rei Ayanami"
+          formControlName="characterName"
+          (change)="characterNameInput()"
+          required
+        />
+        <mat-icon matSuffix>face</mat-icon>
+      </mat-form-field>
+      <app-characters [characters]="searchResults"></app-characters>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="vaSelect">
+    <ng-template matStepLabel="">Select VA</ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Matching Characters</ng-template>
+  </mat-step>
+</mat-stepper>

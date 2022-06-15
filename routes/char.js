@@ -1,16 +1,22 @@
 /**
- * Index router
+ * Character related routes
  * @author Una Ada <una@xn--z7x.dev>
  * @version 2022.05.08
- * @since 2021.06.27
+ * @module routes/char
+ * @see module:controllers/char
  */
 
 /*----- Imports --------------------------------------------------------------*/
 import { Router } from 'express';
+import charCtrl from '../controllers/char.js';
 
 /*----- Routes ---------------------------------------------------------------*/
 const router = new Router();
-router.get('/', (req, res) => res.send(['Placeholder', 'uwu']));
+router.get('/search/:name', charCtrl.search);
+router.use(
+  (err, req, res, next) =>
+  console.error(err) || res.sendStatus(err.status || 500)
+);
 
 /*----- Exports --------------------------------------------------------------*/
 export default router;

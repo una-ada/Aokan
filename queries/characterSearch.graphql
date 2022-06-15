@@ -1,0 +1,16 @@
+query ($search: String) {
+  Page {
+    characters(search: $search) {
+      id
+      name {
+        full
+        native
+      }
+      image {
+        large
+        medium
+      }
+      description(asHtml: true)
+    }
+  }
+}
