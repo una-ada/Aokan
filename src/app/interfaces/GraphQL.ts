@@ -7,7 +7,7 @@ export interface GraphQLError {
   locations: GraphQLErrorLocation[];
 }
 export interface GraphQLResponse<T> {
-  data?: T;
+  data?: {[key: string]: T};
   error?: GraphQLError;
   loading: boolean;
   networkStatus: number;

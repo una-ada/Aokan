@@ -39,6 +39,9 @@ export class IndexComponent implements OnInit {
   characterNameInput(): void {
     this.characterService
       .search(this.characterSelect.value.characterName)
-      .subscribe((list) => (this.searchResults = list.data?.characters));
+      .subscribe(
+        (list) =>
+          (this.searchResults = list.data && list.data['Page']?.characters)
+      );
   }
 }
